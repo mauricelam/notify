@@ -1,0 +1,60 @@
+{
+  "name": "no.tify",
+  "version": "1.15",
+  "manifest_version": 2,
+  "description": "no.tify enables other extensions to get the notifications for websites like Gmail, Google Reader and Windows Live Mail.  ",
+  "background": {
+    "scripts": [
+      "include/md5.js", 
+      "include/js/jquery-1.9.0.min.js", 
+      "include/regexp.js", 
+
+      "js/helper.js", 
+
+      "js/core.js", 
+      "js/modes.js", 
+
+      "js/pref.js", 
+      "js/notifymap.js", 
+      "js/pageaction.js", 
+      "js/read.js", 
+
+      "js/stockitems.js", 
+      "js/inextension.js", 
+
+      "js/extensionmanager.js", 
+      "js/discover.js", 
+
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "images/favicon.png",
+    "48": "images/icon_48.png"
+  },
+  "page_action": {
+    "default_icon": "images/page_inactive.png",
+    "default_title": "Add to no.tify", 
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*.notify*", "file:///*.notify*"],
+      "js": ["install.js"],
+      "all_frames": false
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["inject.js"],
+      "all_frames": false
+    }
+  ],
+  "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC7xyC9ptOjROJX1LIy+jyNkTUHnAoZdSDe1++y9/Fy1B04uBv0CKeI4BZuqoKwXyE0J5B2YhfFP0SXA+e7fcYOSMPZ7umsjxJ9d4SMzqs8Kp3T25BPiJGGgNXobI1X4jdEbYgpw40DNYigwXpHKBwAyCGtE6rZVlSyShN41C8SjwIDAQAB",
+  "permissions": [
+    "<all_urls>",
+	  "tabs"
+  ]
+}
+

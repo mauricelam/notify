@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>no.tify popup</title>
+		<link rel="stylesheet" type="text/css" href="popup.css" />
+		<!--<link rel="stylesheet" href="include/uniform/css/uniform.default.min.css" type="text/css"/>-->
+		<script type="text/javascript" src="include/js/jquery-1.9.0.min.js"></script>
+		<script type="text/javascript" src="include/js/jquery-migrate-1.0.0.min.js"></script>
+		<!--<script type="text/javascript" src="include/uniform/jquery.uniform.min.js"></script>-->
+		<script type="text/javascript" src="js/notifymap.js"></script>
+		<script type="text/javascript" src="js/helper.js"></script>
+		<script type="text/javascript" src="js/modes.js"></script>
+		<script type="text/javascript" src="js/core.js"></script>
+		<script type="text/javascript" src="js/pageaction.js"></script>
+		<script type="text/javascript" src="popup.js"></script>
+	</head>
+	<body>
+		<div>
+			<div id="title" class="app">no.tify item</div>
+			<div id="removeWrap" class="added"><a href="#" id="removeBtn">Remove</a></div>
+		</div>
+		<div id="addBtn" class="btn">Loading...</div>
+		<table id="wrap" class="hidden">
+			<tr>
+				<td class="left"><label for="notifyName">Name</label></td>
+				<td class="right"><input type="text" id="notifyName" /></td>
+			</tr>
+			<tr>
+				<td class="left"><label>Type</label></td>
+				<td class="right"><select id="selectType" disabled="disabled">
+						<option id="loading">Loading...</option>
+				</select></td>
+			</tr>
+		</table>
+		<div id="buttonsWrap">
+			<a class="btn smallBtn" href="options.html" target="_blank" id="customBtn">edit</a>
+			<a class="btn smallBtn active" href="options.html" target="_blank" id="notifyOptions">options</a>
+			<div class="btn smallBtn active right" id="doneBtn">done</div>
+		</div>
+	</body>
+</html>

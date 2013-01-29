@@ -1,0 +1,10 @@
+parse HTTPS page to get RSS
+Pre-installed items
+Auto suggest pages from history
+Multiple Google accounts
+
+Built-in items: 
+Twitter
+Instapaper
+Remember the Milk
+Toodledo

@@ -1,0 +1,127 @@
+<html>
+  <head>
+    <title>no.tify options</title>
+    <!--<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">-->
+    <link rel="stylesheet" href="options.css" type="text/css" />
+  </head>
+  <script src="include/js/jquery-1.9.0.min.js" type="text/javascript"></script>
+  <script src="include/js/jquery-ui-1.10.0.custom.min.js" type="text/javascript"></script>
+  <script src="js/pref.js" type="text/javascript"></script>
+  <script src="js/modes.js" type="text/javascript"></script>
+  <script src="js/helper.js" type="text/javascript"></script>
+  <script src="js/notifymap.js" type="text/javascript"></script>
+  <script src="js/discover.js" type="text/javascript"></script>
+  <script src="js/singleselectable.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="include/css/ui-lightness/jquery-ui-1.10.0.custom.css" />
+  <script src="options.js" type="text/javascript"></script>
+  <body>
+    <div id="header">
+      <img src="images/logo.png" id="logo" />
+      <span id="title">no.tify</span>
+      <div id="trace"></div>
+    </div>
+    <div id="separator">
+      <div id="sep_left">no.tify options</div>
+      <div id="sep_right"></div>
+    </div>
+    <div id="contents">
+      <div id="options">
+        <div class="optionGroup">
+          <input type="checkbox" id="hidePageAction" /><label for="hidePageAction">Hide icon in URL bar</label>
+        </div>
+      </div>
+      <div id="itemControls">
+        <div id="listWrapper"><ul id="itemsList"></ul></div>
+        <div id="itemEditor">
+          <div id="basicEdit" class="hidden">
+            <div class="editItemGroup">
+              <div>Name: </div>
+              <input type="text" class="editBox" id="editItemName" />
+            </div>
+            <div class="editItemGroup">
+              <div>URL: </div>
+              <select class="editBox" id="editItemUrls" size="5" onchange="urlSelect($(this))"></select><br />
+              <div id="editItemUrlWrap" class="itemUrlWrap">
+                <input type="text" class="editBox" id="editItemUrlBox" />
+                <button id="urlOkBtn">Ok</button>
+                <button id="urlRemoveBtn" onclick="removeUrl($('#editItemUrls'))">Remove</button>
+              </div>
+            </div>
+            <div id="editActions">
+              <a href="#" id="downloadBtn"><img src="images/download.png" class="downloadIcon btnIcon" title="download and share this item" /></a>
+              <a href="#" id="removeBtn"><img src="images/remove.png" class="removeIcon btnIcon" title="remove item" /></a>
+            </div>
+            <div id="editItemAdvanced" onclick="return false;"><a href="#">Advanced &gt;&gt;</a></div>
+          </div>
+          <div id="advancedEdit" class="hidden">
+            <div class="editItemGroup">
+              <select id="editItemMode" class="editBox"></select>
+            </div>
+            <div class="editItemGroup" id="editCol3Wrap">
+              <div class="itemLabel"></div>
+              <input type="text" class="editBox" id="editItemCol3" />
+            </div>
+            <div class="editItemGroup" id="editCol4Wrap">
+              <div class="itemLabel"></div>
+              <input type="text" class="editBox" id="editItemCol4" />
+            </div>
+            <div class="editItemGroup">
+              <div id="editItemTest"><a id="testBtn" href="#" onclick="return false">Test</a></div>
+              <div id="testArea"></div>
+            </div>
+            <div id="editItemBasic" onclick="editOption(); return false;"><a href="#">&lt;&lt; Basic</a></div>
+          </div>
+        </div>
+      </div>
+      <div id="directoryAd">
+        <a href="https://sites.google.com/site/chromenotify/no-tify-items" target="_blank">Download more no.tify items from the directory</a>
+      </div>
+    </div>
+    <div id="newItemDialog" class="hidden">
+      <div id="basicNew">
+        <div id="smartError"></div>
+        <div id="discoverLoad"><img src="images/loader_small.gif" /></div>
+        <div id="newItemGroup">
+          <span>URL: </span>
+          <div id="newUrlWrap">
+            <div id="newUrlPreview" class="hidden" onclick="clickNewUrl()"></div>
+            <input type="text" class="editBox" id="newItemBasicUrl" />
+          </div>
+        </div>
+        <div id="smartOptions">
+          <input type="checkbox" id="wildProtocol" checked /><label for="wildProtocol">All protocols</label>
+          <input type="checkbox" id="wildSubdomain" /><label for="wildSubdomain">All subdomains</label>
+          <input type="checkbox" id="wildBack" /><label for="wildBack">All pages in the domain</label>
+        </div>
+        <ol id="smartDisplay"></ol>
+      </div>
+      <div id="advancedNew" class="hidden">
+        <div class="newItemGroup">
+          <div>Name: </div>
+          <input type="text" class="editBox" id="newItemName" />
+        </div>
+        <div class="newItemGroup">
+          <div>URL: </div>
+          <select class="editBox" id="newItemUrls" size="5" onchange="urlSelect($(this))"></select><br />
+          <div id="newItemUrlWrap" class="itemUrlWrap">
+            <input type="text" class="editBox" id="newItemUrlBox" />
+            <button id="newUrlOkBtn">Ok</button>
+            <button id="newUrlRemoveBtn" onclick="removeUrl($('#newItemUrls'))">Remove</button>
+          </div>
+        </div>
+        <div class="newItemGroup">
+          <select id="newItemMode" class="editBox"></select>
+        </div>
+        <div class="newItemGroup" id="newCol3Wrap">
+          <div class="itemLabel"></div>
+          <input type="text" class="editBox" id="newItemCol3" />
+        </div>
+        <div class="newItemGroup" id="newCol4Wrap">
+          <div class="itemLabel"></div>
+          <input type="text" class="editBox" id="newItemCol4" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

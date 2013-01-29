@@ -1,0 +1,41 @@
+body { font-size: 12px; font-family: Arial, sans-serif; width: 250px; padding: 5px 2px; margin: 0; }
+a:link { color: #2020A0; text-decoration: none; }
+a:visited { color: #2020A0; text-decoration: none; }
+a:active { color: #60609F; text-decoration: none; }
+a:hover { color: #303050; text-decoration: none; }
+label { font-size: 10px; color: #666666; }
+.hidden { display: none; }
+.right { float: right; }
+.app { cursor: default; -webkit-user-select: none; }
+
+/*** Buttons ***/
+.btn { display: block; text-align: center; cursor: default;
+	border: 1px solid #CCCCCC; -webkit-border-radius: 5px; 
+    padding: 2px 5px; margin: 3px 2px; 
+	font-size: 12px; color: #333333 !important;  }
+.btn.active:hover { background-color: #F6F6F6; border: 1px solid #AAAAAA; }
+.smallBtn { min-width: 30px; display: inline-block; }
+#addBtn { width: 98%; box-sizing: border-box; height: 55px; line-height: 45px; }
+.added { display: none; } 
+#doneBtn { width: 75px; }
+#customBtn { display: none; }
+/*** End Buttons ***/
+
+#wrap { width: 100%; margin-top: 5px; }
+#wrap .left { text-align: right; }
+#wrap .right { width: 202px; text-align: left; }
+
+#title { display: inline-block; font-size: 16px; color: #666666; }
+#removeWrap { float: right; font-size: 12px; display: none; }
+
+/*** notify box ***/
+#notifyName:focus { border-color: #AAAAAA #DDDDDD #DDDDDD #AAAAAA; }
+#notifyName { width: 95%; box-sizing: border-box; outline: none;
+	margin: 0px 9px 0px 3px;
+	padding: 2px;
+	border: 1px solid #EEEEEE;
+	border-color: #CCCCCC #EEEEEE #EEEEEE #CCCCCC; }
+
+#buttonsWrap { height: 25px; }
+
+#selectType { width: 98%; font-size: 12px; text-align: left; margin-left: 5px; }

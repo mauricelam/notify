@@ -1,0 +1,74 @@
+body { font-family: Arial, sans-serif; font-size: 13px; }
+a:link { color: #202060 !important; text-decoration: none; }
+a:visited { color: #202060 !important; text-decoration: none; }
+a:active { color: #60609F !important; text-decoration: none; }
+a:hover { color: #303050 !important; text-decoration: none; }
+.hidden { display: none; }
+button { cursor: default !important; }
+
+img#logo { width: 67px; height: 67px; vertical-align: middle; }
+div#header { vertical-align: middle; position: relative; }
+span#title { margin-left: 5px; font-weight: bold; vertical-align: middle; font-size: 14.5pt; }
+div#trace { width: 100%; position: absolute; bottom: 0px; text-align: center; color: #AA0000; }
+
+div#separator { margin-top: 12px; background-color: #EBEFF9; border-top: 1px solid #9CC2EF; }
+div#sep_left { font-weight: bold; padding: 5px; }
+div#sep_right { float: right; }
+
+div#contents { padding: 5px; height: auto; }
+div#itemControls { width: 620px; margin: auto; height: auto; }
+
+/** Items list **/
+div#listWrapper { border: 1px solid #CCCCCC; width: 300px; height: 300px; display: inline-block; vertical-align: top; overflow: auto; }
+li.listItem { padding: 3px; }
+li#addItem { color: #666666; padding-left: 10px; }
+div.itemWrap { height: 20px; }
+input.itemCheck { float: left; margin-right: 5px; }
+div.itemName { text-align: left; display: inline-block; }
+div.itemUrl { display: inline-block; min-width: 50px; text-align: right; margin-left: 5px; text-overflow: ellipsis; overflow: hidden; }
+ul#itemsList { width: 100%; list-style-type: none; padding: 0px; margin: 0px; cursor: default; }
+ul#itemsList li { background-color: #FFFFFF; }
+ul#itemsList .ui-selected { background-color: #DDDDDD; }
+
+div#directoryAd { width: 100%; position: fixed; bottom: 5px; text-align: center; }
+
+/** Item Editor **/
+div#itemEditor { width: 300px; height: 290px; border: 1px solid #CCCCCC; display: inline-block; vertical-align: top; padding: 5px; position: relative; }
+div.editItemGroup { margin: 5px 0px; }
+.editBox { width: 100%; }
+.btnIcon { margin: 5px; }
+div#editItemAdvanced { position: absolute; right: 5px; bottom: 5px; }
+div#editItemBasic { position: absolute; left: 5px; bottom: 5px; }
+div#editActions { position: absolute; left: 5px; bottom: 5px; }
+div#urlEditBox { display: none; }
+
+/** New item dialog **/
+div#newItemDialog { width: 95% !important; }
+div#newItemUrlWrap { display: none; }
+div.newItemGroup { margin: 5px 0px; }
+div#newUrlPreview { position: absolute; width: 100%; height: 90%; background-color: #EEEEEE; padding: 5px 4px; }
+div#newUrlWrap { position: relative; width: 90%; display: inline-block; }
+div#smartOptions { padding: 5px 10px; }
+div#smartOptions input { margin-left: 10px; }
+ol#smartDisplay { list-style-type: square; list-style-position: inside; margin: 5px; padding: 0px; background-color: #FFFFFF; border: 1px solid #CCCCCC; max-height: 150px; overflow: auto; display: none; }
+div#smartError { color: #AA0000; height: 20px; text-align: center; }
+
+/*** discover item ***/
+.discoverItem { padding: 2px; padding-left: 5px; cursor: default; display: block; color: #333333 !important; }
+.ui-selected>a.discoverItem { background-color: #DDDDDD; }
+.discoverItemHint { color: #999999 !important; display: inline-block; }
+.singleSelectable-detail { color: #999999 !important; display: none; margin-left: 20px; font-size: 12px; }
+#discoverLoad { display: none; position: absolute; right: 10px; z-index: 99999; }
+
+/** Installation dialog **/
+div.dialogSimple { display: inline-block; }
+table#dialogSimple { width: 100%; }
+div#dialogUrl { float: right; color: #666666; width: auto; }
+div#advancedDialog { margin: 5px 0px; width: 100%; overflow: auto; }
+div#dialogWrap { padding: 20px 5px; border: 1px solid #666666; }
+div.dialogAdvanced { width: auto; overflow: visible; }
+div.advLabel { display: inline-block; color: #666666; font-size: 10px; margin-right: 5px; }
+div.advValue { display: inline-block; }
+.ui-dialog-titlebar-close { display: none; }
+#installDialogName { border: 1px solid transparent; outline: none; background-color: #EEEEEE; }
+#installDialogName:focus { border: 1px dotted #CCC; }
